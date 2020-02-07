@@ -16,7 +16,7 @@ $read = "SELECT * FROM test_user";
 if ($result = $mysqli->query($read)) {
     while ($obj = $result->fetch_assoc()) {
         $massivGroup[] = $obj;
-    }п
+    }
     $result->close();
 }
 $mysqli->close();
@@ -212,26 +212,23 @@ echo "<br>";
 //////////////////////////////////////////////////////////////////
 $array = ['string', 'age', 'name', 'programmer'];
 $massiv = ['integer', 'february', 'teamlead', 'middle'];
-$len = count($array);
-$len1 = count($massiv);
 
-for ($i = 0; $i <= $len; $i++) {
-    for ($j = 0; $j <= $len1; $j++){
-        if ($array[$i] > $massiv[$j]) {
-            $str = strlen($array[$i]);
-            $str1 = strlen($massiv[$j]);
-
-        }
-    }
+foreach ($array as $string) {
+    $len = strlen($string);
 }
+    foreach ($massiv as $string2) {
+         $len2 = strlen($string2);
+    }
+        if ($len % $len2 != 0){
+            $result = $len - $len2;
+            echo "$result <br>";
+        }else{
+            $result2 = $len2 - $len;
+            echo "$result2 <br>";
+        }
 
 
-
-
-
-
-
-
+echo "<br>";
 /////////////////////////////////////////////////////////////////////
 function kurer($z){
     $x = 9; //этажность дома.
@@ -251,33 +248,6 @@ kurer(52);
 echo "<br>";
 echo "<br>";
 ///////////////////////////////////////////////////////////////////////////////
-
-$siti = 'харьков';
-$sities = substr($siti, 0, -4);
-$arr = ['киев', 'воронеж', 'житомир', 'ромны', 'никополь', 'львов', 'волгоград',
-    'донецк', 'калуга', 'ахтырка', 'александрия', 'ялта', 'архангельск', 'кременчуг', 'гадяч',
-    'черкассы', 'суммы', 'мелитополь', 'лондон'];
-$arr1 = ['ы', 'ъ', 'ь', 'ов'];
-foreach ($arr as $key => $value){
-    foreach (){
-        if (){
-
-        }else{
-            $mySiti = substr($value, 0 ). "<br>";
-            if ($sities == $mySiti[0]){
-                echo $value. "<br>";
-            }elseif ($arr != $arr1){
-                echo $value. "<br>";
-            }
-        }
-    }
-
-}
-
-echo "<br>";
-
-
-
 
 
 
