@@ -1,6 +1,6 @@
 -- MySQL dump 10.17  Distrib 10.3.13-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: films
+-- Host: localhost    Database: films;
 -- ------------------------------------------------------
 -- Server version	10.3.13-MariaDB-log
 
@@ -14,38 +14,3 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `movi`
---
-
-DROP TABLE IF EXISTS `movi`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `movi` (
-  `year` int(10) NOT NULL DEFAULT 2020,
-  `actors` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'name actors',
-  `genre` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'genre',
-  `title` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'title'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `movi`
---
-
-LOCK TABLES `movi` WRITE;
-/*!40000 ALTER TABLE `movi` DISABLE KEYS */;
-/*!40000 ALTER TABLE `movi` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2020-02-18 23:57:33
