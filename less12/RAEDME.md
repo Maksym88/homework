@@ -17,7 +17,7 @@ Filmssdb.sql Вы сможете это увидить.
 Ниже я наведу пример использованных мною команд:
 
 ```sql
-alter table mov add column genre_id int not null default 2020; ```
+alter table mov add column genre_id int not null default 2020;```
 ```sql
 insert into mov (title, genre_id) values (название фильма, номер айди жанра);```
 ```sql
@@ -33,8 +33,8 @@ select title, genre from mov right join genres on (mov.genre_id = genres.id);```
 ```sql
 alter table drop mov;``` 
 - (Как я уже выше говорил приходилось удалять полностью таблицу фильмов).
-"```sql"
-update mov set id = id -22;"```" - (приходилось еще и менять номера айди).
+```sql
+update mov set id = id -22;``` - (приходилось еще и менять номера айди).
 
 
 На этом у меня всё, спасибо за внимание.
