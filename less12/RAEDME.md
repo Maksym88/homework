@@ -16,23 +16,23 @@ Filmssdb.sql Вы сможете это увидить.
 
 Ниже я наведу пример использованных мною команд:
 
-```sql
-alter table mov add column genre_id int not null default 2020; ```
-```sql
-insert into mov (title, genre_id) values (название фильма, номер айди жанра);```
-```sql
-delete from mov where id > 23;``` - (удалял лишние строки, 23 строка мой последний фильм).
-```sql
-update mov set genre_id != 2020 where genre_id = 2020;``` - (тут у меня произошли ошибки и
+"```sql"
+alter table mov add column genre_id int not null default 2020; "```"
+"```sql"
+insert into mov (title, genre_id) values (название фильма, номер айди жанра);"```"
+"```sql"
+delete from mov where id > 23;"```" - (удалял лишние строки, 23 строка мой последний фильм).
+"```sql"
+update mov set genre_id != 2020 where genre_id = 2020;"```" - (тут у меня произошли ошибки и
 вынужден был удали таблицу полность чтобы корректно ее создать и заполнить).
-```sql
+"```sql"
 select title, genre from mov left join genres on (mov.genre_id = genres.id) union
-select title, genre from mov right join genres on (mov.genre_id = genres.id);```
+select title, genre from mov right join genres on (mov.genre_id = genres.id);"```"
 - (Таким образом мы объединили левый столбик с правым и сказали им покажите всё и ваши связи).
-```sql
-alter table drop mov;``` - (Как я уже выше говорил приходилось удалять полностью таблицу фильмов).
-```sql
-update mov set id = id -22;``` - (приходилось еще и менять номера айди).
+"```sql"
+alter table drop mov;"```" - (Как я уже выше говорил приходилось удалять полностью таблицу фильмов).
+"```sql"
+update mov set id = id -22;"```" - (приходилось еще и менять номера айди).
 
 
 На этом у меня всё, спасибо за внимание.
