@@ -34,7 +34,8 @@ select title, genre from mov right join genres on (mov.genre_id = genres.id);
 alter table drop mov; 
 - (Как я уже выше говорил приходилось удалять полностью таблицу фильмов).
 
-update mov set id = id -22;``` 
+update mov set id = id -22;
+```
 - (приходилось еще и менять номера айди).
 
 
