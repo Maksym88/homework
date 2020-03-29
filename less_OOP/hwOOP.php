@@ -11,7 +11,9 @@ class Animals{
 
 class Mammals extends Animals{
 
-    public $hare, $predatory, $proboscidean, $rodents, $opossum;
+    public $hare, $proboscidean, $rodents, $opossum;
+
+    protected $predatory;
 
     public function set_predatory($predatory){
         $this->predatory = $predatory;
@@ -29,7 +31,9 @@ class Mammals extends Animals{
 
 class Cat extends Mammals {
 
-    public $color, $species, $nickname;
+    public $color, $nickname;
+
+    protected $species;
 
     public function set_species($species){
         $this->species = $species;
@@ -56,7 +60,7 @@ echo "<br>";
 
 $pred = new Mammals();
 $pred->hare = "hare";
-$pred->predatory ="Lion";
+$pred->set_predatory("Lion");
 $pred->proboscidean ="elephant";
 $pred->opossum ="opossum";
 $pred->rodents = "hamster";
@@ -65,7 +69,7 @@ echo "<br>";
 
 $tom = new Cat();
 $tom->color = "gray";
-$tom->species = "british fold";
+$tom->set_species("british fold");
 $tom->nickname = "Tom";
 echo $tom->get_info();
 
